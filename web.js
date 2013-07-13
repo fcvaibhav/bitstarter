@@ -7,7 +7,6 @@ var app = express.createServer(express.logger());
 var buffernew = new Buffer(40);
 
 var buffernew;
-// First I want to read the file
 fs.readFile('index.html', function read(err, data) {
     if (err) {
         throw err;
