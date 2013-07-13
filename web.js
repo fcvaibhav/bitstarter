@@ -1,9 +1,25 @@
+var fs = require('fs');
+
+var Buffer = require('Buffer')
+
+var buffernew = new Buffer(40);
+
+var buffernew;
+fs.readFileSync('index.html', function(err, data) {
+if (err) {
+throw wrr;
+}
+buffernew = data;
+});
+
+var message = buffernew.tostring("utf-8",0,buffernew.length);
+
 var express = require('express');
 
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send('bitch please');
+  response.send(message);
 });
 
 var port = process.env.PORT || 5000;
